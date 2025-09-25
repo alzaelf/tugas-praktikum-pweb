@@ -6,3 +6,5 @@ di tugas praktikum membuat portofolio web ini saya membuat porto saya yang terdi
 3. skills - beberapa bahasa pemrograman yang telah saya pelajari.
 4. experience - yang berfokus pada pengalaman organisasi saya.
 5. projects - beberapa projects yang sudah saya buat.
+
+web yang saya buat sudah responsive dan juga menerapkan css native/vanilla. juga sudah menggunakan beberapa js seperty typetext dan animalcenter.
