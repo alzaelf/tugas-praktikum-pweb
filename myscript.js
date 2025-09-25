@@ -34,15 +34,14 @@ function typeText() {
 
 function openModal(id) {
   document.getElementById(id).style.display = "flex";
-  document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+  document.body.style.overflow = "hidden"; 
 }
 
 function closeModal(id) {
   document.getElementById(id).style.display = "none";
-  document.body.style.overflow = ""; // Re-enable scrolling
+  document.body.style.overflow = ""; 
 }
 
-// Close modal when clicking outside
 window.onclick = function(event) {
   const modals = document.querySelectorAll(".modal");
   modals.forEach(modal => {
@@ -52,7 +51,6 @@ window.onclick = function(event) {
   });
 };
 
-// Add this JavaScript for the counter animation
 function animateCounter() {
   const counters = document.querySelectorAll('.stat-number');
   const speed = 200;
@@ -76,12 +74,10 @@ function animateCounter() {
   });
 }
 
-// Call this when the about section is in view
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Start continuous typing animation
   setTimeout(typeText, 1000);
   
-  // Animate skill bars
   setTimeout(function() {
     const skillLevels = document.querySelectorAll('.skill-level');
     skillLevels.forEach(level => {
@@ -93,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, 500);
   
-  // Add hover effects to about me photos
   const aboutPhotos = document.querySelectorAll('.photosabout img');
   aboutPhotos.forEach(photo => {
     photo.addEventListener('mouseenter', function() {
@@ -106,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Add intersection observer for counter animation
   const aboutSection = document.getElementById('about');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -122,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Close modal with Escape key
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
     const modals = document.querySelectorAll(".modal");
@@ -134,7 +127,6 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -143,14 +135,13 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     
     if (targetSection) {
       window.scrollTo({
-        top: targetSection.offsetTop - 80, // Adjust for navbar height
+        top: targetSection.offsetTop - 80, 
         behavior: 'smooth'
       });
     }
   });
 });
 
-// Active section indicator
 function updateActiveSection() {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -175,15 +166,11 @@ function updateActiveSection() {
   });
 }
 
-// Update active section on scroll
 window.addEventListener('scroll', updateActiveSection);
 
-// Initialize typing animation when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  // Start continuous typing animation
   setTimeout(typeText, 1000);
   
-  // Animate skill bars
   setTimeout(function() {
     const skillLevels = document.querySelectorAll('.skill-level');
     skillLevels.forEach(level => {
@@ -195,7 +182,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, 500);
   
-  // Add hover effects to about me photos
   const aboutPhotos = document.querySelectorAll('.photosabout img');
   aboutPhotos.forEach(photo => {
     photo.addEventListener('mouseenter', function() {
